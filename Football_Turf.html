@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<title>Sportobuddy.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-rc.1/angular.min.js"></script>
+<script src="//code.angularjs.org/snapshot/angular.min.js"></script>
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("turf2.jpg");
+  min-height: 90%;
+}
+</style>
+<body ng-app="formExample">
+
+  
+
+<!-- Navbar (sit on top) -->
+<div class="col-md-12" align="right">
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#menu" class="w3-bar-item w3-button">VENUES</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#myMap" class="w3-bar-item w3-button">CONTACT</a>
+    Search <input type="text" ng-model="searchTurf"  />
+  </div>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Open from 6AM to 9PM</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-red w3-hide-small" style="font-size:100px">SPORTOBUDDY TURF</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>Turfs<br>VENUES</b></span>
+    <p><a href="#menu" class="w3-button w3-xxlarge w3-black">Let me see the venues</a></p>
+  </div>
+</header>
+
+<!-- Menu Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="menu">
+  <div class="w3-content">
+  
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:0px">THE VENUES</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Turf');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Football Turfs</div>
+      </a>
+      
+    </div>
+
+    <div id="Turf" class="w3-container menu w3-padding-32 w3-white">
+      <h1><b>Sportobuddy Sports Arena 1</b> <span class="tag w3-red round">30% Off</span><div>Address</div>
+Priyadarshini Park , L Jagmohandas Marg, Malabar Hill, Malabar Hill, Maharashtra, Mumbai - 400006</p><img src="turf.jpg" width="350" height="200"><span class="w3-right w3-tag w3-dark-grey w3-round"><button ng-click="myFun()" style="font-family:Kristen ITC;background-color: aquamarine; font-size: xlarge;"><a href="https://goo.gl/maps/H1cJfWYQ4dQwr7ZE7">Location</button></span></h1></a>
+      <p class="w3-text-grey"></p>
+      <hr>
+   
+      <h1><b>Sportobuddy Sports Arena 2</b> <span class="tag w3-red round">30% Off</span><div>Address</div>Rooftop, Marwah House,Krishanlal Marwah Marg,Andheri (East), Mumbai 400 072</p><img src="turf1.jpg" width="350" height="200"><span class="w3-right w3-tag w3-dark-grey w3-round"><button ng-click="myFun()" style="font-family:Kristen ITC;background-color: aquamarine; font-size: xlarge;"><a href="https://goo.gl/maps/iV1TJSCuB4MCMYYe7">Location</button></span></h1></a>
+      <p class="text-grey"></p>
+      <hr>
+      
+      <h1><b>Sportobuddy Sports Arena 3</b><span class="tag w3-red w3-round">30% Off</span><div>Address</div>Chitrakoot Ground, Off. Link Road, Opp. Yash Raj Studio, Andheri West, Maharashtra, Mumbai - 400053</p><img src="turf2.jpg" width="350" height="250"><span class="w3-right w3-tag w3-dark-grey w3-round"><button ng-click="myFun()" style="font-family:Kristen ITC;background-color: aquamarine; font-size: xlarge;"><a href="https://g.page/chitrakoot-ground?share">Location</span></h1></a>
+      <p class="text-grey"></p>
+      <hr>
+
+      <h1><b>Sportobuddy Sports Arena 4</b> <span class="tag w3-red round">30% Off</span><div>Address</div>St. Xaviers's GroundSt. Xavier Street,Parel, Mumbai 400 012.</p><img src="turf7.jpg" width="350" height="200"><span class="w3-right w3-tag w3-dark-grey w3-round"><button ng-click="myFun()" style="font-family:Kristen ITC;background-color: aquamarine; font-size: xlarge;"><a href="https://goo.gl/maps/xRnuP2KCZ8pwW1Pg7">Location</button></span></h1></a>
+      <p class="text-grey"></p>
+      <hr>
+
+      <h1><b>Sportobuddy Sports Arena 3</b><span class="tag w3-red w3-round">30% Off</span><div>Address</div>Chitrakoot Ground, Off. Link Road, Opp. Yash Raj Studio, Andheri West, Maharashtra, Mumbai - 400053</p><img src="turf2.jpg" width="350" height="250"><span class="w3-right w3-tag w3-dark-grey w3-round"><button ng-click="myFun()" style="font-family:Kristen ITC;background-color: aquamarine; font-size: xlarge;"><a href="https://g.page/chitrakoot-ground?share">Location</span></h1></a>
+      <p class="text-grey"></p>
+      <hr>
+
+  </div>
+</div>
+
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    <p>Artificial turf has been around for decades and has been used in different sports – with varying degrees of success and intensity – since the first-generation turf of the 1960s.The suitability of unfilled or sand-filled artificial turf systems for football has always been a matter of much debate and it was therefore only with the introduction of third-generation systems (3G), which include both sand and rubber infill, that the surfaces became a true alternative.</p>
+    
+    <img src="turf1.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Restaurant">
+    <h1><b>Opening Hours</b></h1>
+    
+    <div class="w3-row">
+      <div class="w3-col s6">
+        <p>Mon 6.00 - 21.00</p>
+        <p>Thesday 6.00 - 21.00</p>
+        <p>Wednesday 6.00 - 21.00</p>
+        <p>Thursday 6:00 - 21:00</p>
+      </div>
+      <div class="w3-col s6">
+        <p>Friday 6:00 - 22:00</p>
+        <p>Saturday 6:00 - 22:00</p>
+        <p>Sunday Closed</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+<img src="turf3.jpg" class="w3-image w3-greyscale" style="width:100%;" id="myMap">
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Contact</h1>
+    <p align="left">Find us at this address </p>
+    <div>
+   Chitrakoot Ground, Off. Link Road, Opp. Yash Raj Studio, Andheri West, Maharashtra, Mumbai - 400053</div>
+
+    <p>Call us at <div>9756782877 / 7045589331</div></p>
+    <p><span class="w3-tag">FYI!</span> We offer give 30% Offer to more then 6 players.</p>
+    <p class="w3-xxlarge"><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    
+<div ng-controller="ExampleController">
+  <form novalidate class="simple-form">
+    <label>Name: <input type="text" ng-model="user.name" /></label><br />
+    <label>E-mail: <input type="user" ng-model="user.email" /></label><br />
+    <label>Date: <input type="date" ng-model="user.date" /></label><br />
+    Best Editor: <label><input type="radio" ng-model="user.preference" value="Male" />Male</label>
+    <label><input type="radio" ng-model="user.preference" value="Female" />Female</label><br />
+
+    <input type="button" ng-click="reset()" value="Reset" />
+    <input type="submit" ng-click="update(user)" value="Save" />
+  </form>
+
+  <pre>user = {{user | json}}</pre>
+  <pre>master = {{master | json}}</pre>
+
+</div>
+<script>
+  angular.module('formExample', [])
+    .controller('ExampleController', ['$scope', function($scope) {
+      $scope.master = {};
+
+      $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+      };
+
+      $scope.reset = function() {
+        $scope.user = angular.copy($scope.master);
+      };
+
+      $scope.reset();
+    }]);
+</script>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) 
+{
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
